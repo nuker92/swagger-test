@@ -1,5 +1,6 @@
 package com.ochodek.swaggertest.service;
 
+import com.ochodek.swaggertest.dto.CarDto;
 import com.ochodek.swaggertest.enums.CarBrand;
 import com.ochodek.swaggertest.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,8 @@ public class InitDbService {
 
     @PostConstruct
     private void initDb() {
-        carService.add(new Car(CarBrand.AUDI, 2, "SK000111"));
-        carService.add(new Car(CarBrand.MERCEDES, 1, "SK111000"));
+        carService.add(new CarDto(CarBrand.AUDI, "SK000111", 2));
+        carService.add(new CarDto(CarBrand.MERCEDES, "SK111000", 1));
     }
 
 }

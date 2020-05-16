@@ -31,8 +31,12 @@ public class CarService {
                 .collect(Collectors.toList());
     }
 
-    public Car add(Car car) {
-        return carRepository.save(car);
+    public Car add(CarDto carDto) {
+        return carRepository.save(new Car(carDto.getBrand(), carDto.getAge(), carDto.getLicensePlate()));
+    }
+
+    public Car findById(Long id) {
+        return carRepository.findById(id).orElse(null);
     }
 
 

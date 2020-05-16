@@ -1,0 +1,9 @@
+POST http://localhost:8080/car
+Content-Type: application/json;charset=UTF-8
+
+{
+  "brand": "AUDI",
+  "licensePlate": "SK333222",
+  "age": 3
+}
+
